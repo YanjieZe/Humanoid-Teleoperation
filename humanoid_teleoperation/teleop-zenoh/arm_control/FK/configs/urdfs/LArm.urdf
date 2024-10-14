@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="GR1T1_torso">
+  <link
+    name="base">
+    <!-- <inertial>
+      <origin
+        xyz="-0.0098261 -2.1367E-06 0.0024397"
+        rpy="0 0 0" />
+      <mass
+        value="7.3439" />
+      <inertia
+        ixx="0.030526"
+        ixy="-7.0447E-07"
+        ixz="8.7809E-05"
+        iyy="0.021757"
+        iyz="2.9021E-07"
+        izz="0.013679" />
+    </inertial> -->
+    <visual>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" /> -->
+      <geometry>
+        <mesh
+          filename="../meshes/torso.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" /> -->
+      <geometry>
+        <mesh
+          filename="../meshes/torso.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LArm1">
+    <inertial>
+      <origin
+        xyz="0.00515733406628827 0.0588336893605051 0.000122943787577268"
+        rpy="0 0 0" />
+      <mass
+        value="0.777393531985014" />
+      <inertia
+        ixx="0.000546409518238415"
+        ixy="4.55000976034994E-07"
+        ixz="6.15521782403441E-08"
+        iyy="0.000340546617647242"
+        iyz="8.6238324331428E-07"
+        izz="0.000319394142650317" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm1.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="LArm1"
+    type="revolute">
+    <origin
+      xyz="0 0.126619504931776 0.0590541813011525"
+      rpy="0.43640313462146 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="LArm1" />
+    <axis
+      xyz="0 0.999999999996943 0" />
+    <limit
+      lower="-2.79"
+      upper="1.92"
+      effort="38"
+      velocity="9.11" />
+  </joint>
+  <link
+    name="LArm2">
+    <inertial>
+      <origin
+        xyz="0.0260054889695985 0.0238304608304643 -0.0272078144143461"
+        rpy="0 0 0" />
+      <mass
+        value="0.0841110150281995" />
+      <inertia
+        ixx="8.86545692234474E-05"
+        ixy="1.10261615048222E-05"
+        ixz="-1.68388747194297E-05"
+        iyy="6.47384851947622E-05"
+        iyz="2.98032549399858E-05"
+        izz="5.86690192674295E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+      xyz="0 0 0"
+      rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.04"/>
+      </geometry>  
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm2.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="LArm2"
+    type="revolute">
+    <origin
+      xyz="0 0.0669999999997943 0"
+      rpy="-0.43640313462656 0 0" />
+    <parent
+      link="LArm1" />
+    <child
+      link="LArm2" />
+    <axis
+      xyz="0.999999999925458 0 -1.22100045518416E-05" />
+    <limit
+      lower="-0.57"
+      upper="3.27"
+      effort="38"
+      velocity="9.11" />
+  </joint>
+  <link
+    name="LArm3">
+    <inertial>
+      <origin
+        xyz="-4.12427484463573E-05 0.00135030586811913 -0.101007372712704"
+        rpy="0 0 0" />
+      <mass
+        value="0.78992960788886" />
+      <inertia
+        ixx="0.000420362349750441"
+        ixy="-4.29935210465679E-08"
+        ixz="2.9021678249261E-07"
+        iyy="0.000479981540492686"
+        iyz="1.20389492536668E-05"
+        izz="0.000316490912519407" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+      xyz="0 0 -0.05"
+      rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="0.11" radius="0.03"/>
+      </geometry> 
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm3.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="LArm3"
+    type="revolute">
+    <origin
+      xyz="0 0.0400039302729525 -0.0575015701174135"
+      rpy="0 0 0" />
+    <parent
+      link="LArm2" />
+    <child
+      link="LArm3" />
+    <axis
+      xyz="1.22100045817757E-05 6.83490816764502E-05 0.999999997589659" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="30"
+      velocity="7.33" />
+  </joint>
+  <link
+    name="LArm4">
+    <inertial>
+      <origin
+        xyz="2.60518595252002E-07 0.0196936824971259 -0.0210902088376422"
+        rpy="0 0 0" />
+      <mass
+        value="0.0553958425180931" />
+      <inertia
+        ixx="2.63266982648188E-05"
+        ixy="8.99558077508927E-11"
+        ixz="1.02219606504598E-10"
+        iyy="2.41073388509647E-05"
+        iyz="-7.4397578817656E-06"
+        izz="1.84112656900213E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm4.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="LArm4"
+    type="revolute">
+    <origin
+      xyz="0 1.28869477361571E-05 -0.188546025627068"
+      rpy="0 0 0" />
+    <parent
+      link="LArm3" />
+    <child
+      link="LArm4" />
+    <axis
+      xyz="0 0.999999997664201 6.83490816804566E-05" />
+    <limit
+      lower="-2.27"
+      upper="2.27"
+      effort="30"
+      velocity="7.33" />
+  </joint>
+  <link
+    name="LArm5">
+    <inertial>
+      <origin
+        xyz="-4.20995524185452E-05 0.000336116177448914 -0.0559829380105822"
+        rpy="0 0 0" />
+      <mass
+        value="0.606076158384213" />
+      <inertia
+        ixx="0.000747174769416668"
+        ixy="6.19684554111347E-07"
+        ixz="6.37825833529033E-06"
+        iyy="0.000708647092597256"
+        iyz="-1.62066266681277E-05"
+        izz="0.000281470921643104" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+      xyz="0 0 -0.08"
+      rpy="0 0 0"/>
+    <geometry>
+      <cylinder length="0.17" radius="0.035"/>
+    </geometry>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm5.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="LArm5"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0405043040990825"
+      rpy="0 0 0" />
+    <parent
+      link="LArm4" />
+    <child
+      link="LArm5" />
+    <axis
+      xyz="1.22100045815953E-05 6.83490816738029E-05 0.999999997589659" />
+    <limit
+      lower="-2.97"
+      upper="2.97"
+      effort="10.2"
+      velocity="24.4" />
+  </joint>
+  <link
+    name="LArm6">
+    <inertial>
+      <origin
+        xyz="-1.54827265869129E-08 -0.000448455168757828 -1.93942481241383E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0054472718960219" />
+      <inertia
+        ixx="7.34397969532508E-08"
+        ixy="-5.32283001443359E-13"
+        ixz="-5.67845625112269E-12"
+        iyy="3.55266653745684E-07"
+        iyz="-1.57700383161282E-13"
+        izz="3.60355582259622E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm6.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="LArm6"
+    type="revolute">
+    <origin
+      xyz="0 1.37754857983396E-05 -0.201546025565242"
+      rpy="0 0 0" />
+    <parent
+      link="LArm5" />
+    <child
+      link="LArm6" />
+    <axis
+      xyz="0.999999999925452 0 -1.22105233328853E-05" />
+    <limit
+      lower="-0.61"
+      upper="0.61"
+      effort="3.95"
+      velocity="27.96" />
+  </joint>
+  <link
+    name="LArm7">
+    <inertial>
+      <origin
+        xyz="0.00712892057023687 -0.00261916410012467 -0.0785669672136298"
+        rpy="0 0 0" />
+      <mass
+        value="0.523903152961844" />
+      <inertia
+        ixx="0.000202263942714055"
+        ixy="1.81451186115168E-06"
+        ixz="7.75058802770553E-06"
+        iyy="0.00034573853753232"
+        iyz="2.84322351059511E-06"
+        izz="0.000205453269913871" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+      xyz="0 0 -0.07"
+      rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.05"/>
+    </geometry>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/LArm7.STL" />
+      </geometry> -->
+    </collision>
+  </link>
+  <joint
+    name="LArm7"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="LArm6" />
+    <child
+      link="LArm7" />
+    <axis
+      xyz="0 1 6.8349E-05" />
+    <limit
+      lower="-0.61"
+      upper="0.61"
+      effort="3.95"
+      velocity="27.96" />
+  </joint>
+</robot>

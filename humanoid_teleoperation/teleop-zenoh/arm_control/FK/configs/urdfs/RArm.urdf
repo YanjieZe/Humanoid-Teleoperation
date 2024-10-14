@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="GR1T1_torso">
+  <link
+    name="base">
+    <!-- <inertial>
+      <origin
+        xyz="-0.0098261 -2.1367E-06 0.0024397"
+        rpy="0 0 0" />
+      <mass
+        value="7.3439" />
+      <inertia
+        ixx="0.030526"
+        ixy="-7.0447E-07"
+        ixz="8.7809E-05"
+        iyy="0.021757"
+        iyz="2.9021E-07"
+        izz="0.013679" />
+    </inertial> -->
+    <visual>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" /> -->
+      <geometry>
+        <mesh
+          filename="../meshes/torso.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <!-- <origin
+        xyz="0 0 0"
+        rpy="0 0 0" /> -->
+      <geometry>
+        <mesh
+          filename="../meshes/torso.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- <joint
+    name="torso"
+    type="fixed">
+    <origin
+      xyz="0 -1.0814E-05 0.15821"
+      rpy="0 0 0" />
+    <parent
+      link="waist_roll" />
+    <child
+      link="torso" />
+    <axis
+      xyz="0 0 0" />
+  </joint> -->
+<link
+name="RArm1">
+<inertial>
+  <origin
+    xyz="0.0051573461647914 -0.0587916277830128 0.000122943535471598"
+    rpy="0 0 0" />
+  <mass
+    value="0.777390589780417" />
+  <inertia
+    ixx="0.000546409635678407"
+    ixy="-2.01826802795754E-07"
+    ixz="6.15757066968225E-08"
+    iyy="0.000340546280861014"
+    iyz="-1.08167740480887E-06"
+    izz="0.000319394990371619" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm1.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<!-- <collision>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm1.STL" />
+  </geometry>
+</collision> -->
+</link>
+<joint
+name="RArm1"
+type="revolute">
+<origin
+  xyz="0 -0.126627576346971 0.0590368720957457"
+  rpy="-0.436266549196877 0 0" />
+<parent
+  link="base" />
+<child
+  link="RArm1" />
+<axis
+  xyz="0 1 0" />
+<limit
+  lower="-2.79"
+  upper="1.92"
+  effort="38"
+  velocity="9.11" />
+</joint>
+<link
+name="RArm2">
+<inertial>
+  <origin
+    xyz="0.0260058558522785 -0.0238263693878023 -0.0272108671462994"
+    rpy="0 0 0" />
+  <mass
+    value="0.0840988886420018" />
+  <inertia
+    ixx="8.86445321866659E-05"
+    ixy="-1.10218258816922E-05"
+    ixz="-1.68368503833084E-05"
+    iyy="6.47370003862285E-05"
+    iyz="-2.9799108598388E-05"
+    izz="5.86526415191045E-05" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm2.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<collision>
+  <origin
+  xyz="0 0 0"
+  rpy="0 0 0"/>
+  <geometry>
+    <sphere radius="0.04"/>
+  </geometry>     
+  <!-- <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm2.STL" />
+  </geometry> -->
+</collision>
+</link>
+<joint
+name="RArm2"
+type="revolute">
+<origin
+  xyz="0 -0.0670000000000315 0"
+  rpy="0.436266549201976 0 0" />
+<parent
+  link="RArm1" />
+<child
+  link="RArm2" />
+<axis
+  xyz="1 0 0" />
+<limit
+  lower="-3.27"
+  upper="0.57"
+  effort="38"
+  velocity="9.11" />
+</joint>
+<link
+name="RArm3">
+<inertial>
+  <origin
+    xyz="0.00017082971927479 -0.00124147770098104 -0.100980640933908"
+    rpy="0 0 0" />
+  <mass
+    value="0.789929613521277" />
+  <inertia
+    ixx="0.00042016226746686"
+    ixy="9.56785696622632E-07"
+    ixz="-3.81937863036313E-08"
+    iyy="0.000480249411636791"
+    iyz="-1.18111475395099E-05"
+    izz="0.000316423129953194" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm3.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<collision>
+  <origin
+  xyz="0 0 -0.05"
+  rpy="0 0 0"/>
+  <geometry>
+    <cylinder length="0.11" radius="0.03"/>
+  </geometry>     
+  <!-- <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm3.STL" />
+  </geometry> -->
+</collision>
+</link>
+<joint
+name="RArm3"
+type="revolute">
+<origin
+  xyz="0 -0.0399960718836767 -0.057472733771312"
+  rpy="0 0 0" />
+<parent
+  link="RArm2" />
+<child
+  link="RArm3" />
+<axis
+  xyz="0 0 1" />
+<limit
+  lower="-2.97"
+  upper="2.97"
+  effort="30"
+  velocity="7.33" />
+</joint>
+<link
+name="RArm4">
+<inertial>
+  <origin
+    xyz="2.54537579041925E-07 -0.0196907994945518 -0.0210929007516363"
+    rpy="0 0 0" />
+  <mass
+    value="0.0553958425155445" />
+  <inertia
+    ixx="2.63266982660393E-05"
+    ixy="-9.17316256556844E-11"
+    ixz="9.10503314380188E-11"
+    iyy="2.4105304727251E-05"
+    iyz="7.44053625339131E-06"
+    izz="1.84132998138921E-05" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm4.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<!-- <collision>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm4.STL" />
+  </geometry>
+</collision> -->
+</link>
+<joint
+name="RArm4"
+type="revolute">
+<origin
+  xyz="0 1.28858724863512E-05 -0.188530329837713"
+  rpy="0 0 0" />
+<parent
+  link="RArm3" />
+<child
+  link="RArm4" />
+<axis
+  xyz="0 1 0" />
+<limit
+  lower="-2.27"
+  upper="2.27"
+  effort="30"
+  velocity="7.33" />
+</joint>
+<link
+name="RArm5">
+<inertial>
+  <origin
+    xyz="0.000158043899506036 -0.00047882179858022 -0.0559415052246022"
+    rpy="0 0 0" />
+  <mass
+    value="0.606076127067477" />
+  <inertia
+    ixx="0.000748031289868089"
+    ixy="-2.3854566608946E-07"
+    ixz="-6.67415672551872E-06"
+    iyy="0.000707789468859293"
+    iyz="1.63905136248604E-05"
+    izz="0.000281472007554912" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm5.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<collision>
+  <origin
+  xyz="0 0 -0.08"
+  rpy="0 0 0"/>
+<geometry>
+  <cylinder length="0.17" radius="0.035"/>
+</geometry>
+  <!-- <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm5.STL" />
+  </geometry> -->
+</collision>
+</link>
+<joint
+name="RArm5"
+type="revolute">
+<origin
+  xyz="0 0 -0.0404999999249678"
+  rpy="0 0 0" />
+<parent
+  link="RArm4" />
+<child
+  link="RArm5" />
+<axis
+  xyz="0 0 1" />
+<limit
+  lower="-2.97"
+  upper="2.97"
+  effort="10.2"
+  velocity="24.4" />
+</joint>
+<link
+name="RArm6">
+<inertial>
+  <origin
+    xyz="1.55450361333243E-08 0.000448455227116895 4.19375302540548E-08"
+    rpy="0 0 0" />
+  <mass
+    value="0.00544727191488812" />
+  <inertia
+    ixx="7.34397972569072E-08"
+    ixy="-5.35592209041065E-13"
+    ixz="-1.32244752229236E-12"
+    iyy="3.55266654388823E-07"
+    iyz="-5.31784471270005E-13"
+    izz="3.60355588476905E-07" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm6.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<!-- <collision>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm6.STL" />
+  </geometry>
+</collision> -->
+</link>
+<joint
+name="RArm6"
+type="revolute">
+<origin
+  xyz="0 1.37746064643451E-05 -0.201530329815114"
+  rpy="0 0 0" />
+<parent
+  link="RArm5" />
+<child
+  link="RArm6" />
+<axis
+  xyz="1 0 0" />
+<limit
+  lower="-0.61"
+  upper="0.61"
+  effort="3.95"
+  velocity="27.96" />
+</joint>
+<link
+name="RArm7">
+<inertial>
+  <origin
+    xyz="0.00607325532530682 0.00189074124264496 -0.084577985726384"
+    rpy="0 0 0" />
+  <mass
+    value="0.532206499007917" />
+  <inertia
+    ixx="0.000189656913817034"
+    ixy="-1.68504094376531E-06"
+    ixz="6.95267322111039E-06"
+    iyy="0.000319832350579962"
+    iyz="-3.42844983879869E-06"
+    izz="0.000189228448074797" />
+</inertial>
+<visual>
+  <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm7.STL" />
+  </geometry>
+  <material
+    name="">
+    <color
+      rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+  </material>
+</visual>
+<collision>
+  <origin
+  xyz="0 0 -0.07"
+  rpy="0 0 0"/>
+<geometry>
+  <sphere radius="0.05"/>
+</geometry> 
+  <!-- <origin
+    xyz="0 0 0"
+    rpy="0 0 0" />
+  <geometry>
+    <mesh
+      filename="../meshes/RArm7.STL" />
+  </geometry> -->
+</collision>
+</link>
+<joint
+name="RArm7"
+type="revolute">
+<origin
+  xyz="0 0 0"
+  rpy="0 0 0" />
+<parent
+  link="RArm6" />
+<child
+  link="RArm7" />
+<axis
+  xyz="0 1 0" />
+<limit
+  lower="-0.61"
+  upper="0.61"
+  effort="3.95"
+  velocity="27.96" />
+</joint>
+</robot>
