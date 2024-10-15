@@ -64,7 +64,13 @@ For teleoperation installation on the robot, please see [Teleoperation INSTALL](
     
     You would have the converted training data. To use the training data, see [our iDP3 repo](https://github.com/YanjieZe/Improved-3D-Diffusion-Policy).
 
+## Use it for your own robot
 
+We also provide the instructions for adapting the teleoperation to your own robot.
+
+By providing basic configuration and forward kinematics, you can teleoperate your humanoid robot arms and hands.
+
+Please see [Humanoid Arm Retarget](https://github.com/Hao-Starrr/humanoid-arm-retarget) for more details.
 
 ## BibTeX
 
