@@ -13,7 +13,6 @@
 
     pip install avp_stream sapien==3.0.b0 tyro anytree trimesh pytransform3d nlopt
     pip install cmeel-urdfdom==3.1.1.1 pin==2.7.0
-    cd teleop-real && pip install -e . && cd ..
     pip install pyrealsense2==2.54.2.5684
     pip install quaternionic tqdm 
     pip install vuer==0.0.32rc7
