@@ -83,3 +83,7 @@ Please consider citing our paper if you find this repo useful:
   journal = {arXiv preprint arXiv:2410.10803}
 }
 ```
+
+## Acknowledgement
+
+We thank the authors of the following repos for their great work: [3D Diffusion Policy](https://github.com/YanjieZe/3D-Diffusion-Policy), [Diffusion Policy](https://github.com/columbia-ai-robotics/diffusion_policy), [VisionProTeleop](https://github.com/Improbable-AI/VisionProTeleop), [Open-TeleVision](https://github.com/OpenTeleVision/TeleVision). 
