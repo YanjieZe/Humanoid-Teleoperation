@@ -10,6 +10,8 @@ https://github.com/user-attachments/assets/9c013594-2181-47f7-a190-bb754c1fd934
 
 This repo is for humanoid teleoperation using Apple Vision Pro. 
 
+(2024.01.29) Check [this repo](https://github.com/FFTAI/teleoperation) for a more mature version!
+
 Hardware requirements:
 - [Apple Vision Pro](https://www.apple.com/apple-vision-pro/). 
 - Humanoid robot. We use [Fourier GR1](https://www.fourierintelligence.com/gr1) as the robot platform, with [Inspire Hands](https://inspire-robots.store/collections/the-dexterous-hands) as the end-effector.
@@ -23,6 +25,7 @@ The training data is collected and the converted to the training format to train
 
 
 We provide the raw data example in [Google Drive](https://drive.google.com/file/d/1JOaOYugZDtkrz3aYpQq3w8zQPdy4AudD/view?usp=sharing). You could explore the data and use our provided script to convert the data to the training format. We have also provided the training data example in [Google Drive](https://drive.google.com/file/d/1c-rDOe1CcJM8iUuT1ecXKjDYAn-afy2e/view?usp=sharing).
+
 
 ## Installation
 
